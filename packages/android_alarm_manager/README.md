@@ -30,6 +30,7 @@ void printHello() {
 main() async {
   final int helloAlarmID = 0;
   runApp(...);
+  await AndroidAlarmManager.initialize();
   await AndroidAlarmManager.periodic(const Duration(minutes: 1), helloAlarmID, printHello);
 }
 ```
